@@ -1,21 +1,24 @@
-# hotel_app
+# 酒店管理系统
 
-> A Vue.js project
+酒店后台管理系统后端仓库链接：[https://github.com/yezijun995/hotel](https://github.com/yezijun995/hotel)
 
-## Build Setup
+酒店后台管理系统后台前端仓库链接：[https://github.com/yezijun995/hotel-admin-ui](https://github.com/yezijun995/hotel-admin-ui)
 
-``` bash
-# install dependencies
+酒店后台管理系统前台前端仓库链接：[https://github.com/yezijun995/hotel-app](https://github.com/yezijun995/hotel-app)
+
+
+
+## 步骤一：下载包
+
+```
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 步骤二：项目启动
+
+```
+npm run dev
+```
+
+
+
