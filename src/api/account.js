@@ -15,4 +15,12 @@ export function getAccountInfo(username) {
     url: URL + "/" + username,
     method: 'get'
   })
-}
+};
+
+export function updateAccount(data) {
+  return request({
+    url: URL,
+    method: 'put',
+    data: data
+  })
+};

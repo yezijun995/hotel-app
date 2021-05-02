@@ -2,7 +2,7 @@
   <div id="makeOrder">
     <mu-container class="container">
       <mu-row>
-        <mu-appbar class="appBar" color="primary">
+        <mu-appbar class="appBar" >
           <mu-icon value="inbox" slot="left"></mu-icon>
           <span>正在预订</span>
         </mu-appbar>
@@ -25,15 +25,15 @@
             <mu-date-input icon="today" :disabled="form.orderDate == null" label="离店日期" :min-date="form.orderDate"
                            v-model="leaveDate" format="YYYY 年 MM 月 DD 日离店" label-float full-width></mu-date-input>
             <mu-form-item icon="access_time">
-              <mu-button flat color="primary">共{{ form.orderDays }}晚</mu-button>
+              <mu-button flat style="background-color: #11a8db;">共{{ form.orderDays }}晚</mu-button>
             </mu-form-item>
           </mu-form>
-          <mu-button color="primary" style="width: 100%" flat="">订单消费总共 ￥ {{ form.orderCost }}</mu-button>
+          <mu-button style="width: 100%;background-color: #11a8db;" flat="">订单消费总共 ￥ {{ form.orderCost }}</mu-button>
         </mu-card-text>
         <mu-card-actions>
           <mu-button color="secondary" style="width: 49%" @click="goBack">取消</mu-button>
           <!--<mu-button>Action 1</mu-button>-->
-          <mu-button color="primary" style="width: 49%" @click="submitOrder">提交订单</mu-button>
+          <mu-button style="width: 49%;background-color: #11a8db; " @click="submitOrder">提交订单</mu-button>
         </mu-card-actions>
       </mu-card>
     </mu-container>
@@ -68,6 +68,7 @@
           username: null,
           userId: Cookie.get("user_id"),
           phone: null,
+          hotelId: Cookie.get('hotelId'),
           roomTypeId: null,
           roomTypeName: null,
           orderDate: null,
@@ -136,6 +137,7 @@
     margin: 10px;
     color: #fff;
     padding: 10px;
+    background-color: #11a8db;
   }
 
   .container {

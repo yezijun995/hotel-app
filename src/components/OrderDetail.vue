@@ -2,7 +2,7 @@
   <div id="orderDetail">
     <mu-container class="container">
       <mu-row>
-        <mu-appbar class="appBar" color="primary">
+        <mu-appbar class="appBar" >
           <mu-icon value="account_balance_wallet" slot="left"></mu-icon>
           订单详情
         </mu-appbar>
@@ -72,7 +72,7 @@
                 订单状态：{{order.orderState|getOrderStatus }}
               </mu-button>
 
-              <mu-button color="primary" @click="openPass = true" v-show="order.orderState === '0'">立即付款</mu-button>
+              <mu-button style="background-color: #11a8db; " @click="openPass = true" v-show="order.orderState === '0'">立即付款</mu-button>
               <mu-button flat @click="goBack()">返回</mu-button>
               <mu-button color="error" @click="openCancel = true"
                          v-show="order.orderState >= 0 && order.orderState <2">取消订单
@@ -88,12 +88,12 @@
                      icon="fingerprint"></mu-text-field>
       <br/>
       <mu-button slot="actions" flat color="error" @click="openPass = false">取消</mu-button>
-      <mu-button slot="actions" flat color="primary" @click="pay()">确认付款</mu-button>
+      <mu-button slot="actions" flat style="background-color: #11a8db;" @click="pay()">确认付款</mu-button>
     </mu-dialog>
     <mu-dialog title="取消订单" width="360" :open.sync="openCancel" :loading="cancelLoading">
       确认取消订单吗？
       <mu-button slot="actions" flat color="secondary" @click="openCancel = false">返回</mu-button>
-      <mu-button slot="actions" flat color="primary" @click="cancelOrder()">确认取消</mu-button>
+      <mu-button slot="actions" flat style="background-color: #11a8db;" @click="cancelOrder()">确认取消</mu-button>
     </mu-dialog>
   </div>
 </template>
@@ -237,6 +237,7 @@
     margin: 10px;
     color: #fff;
     padding: 10px;
+    background-color: #11a8db;
   }
 
   .card {

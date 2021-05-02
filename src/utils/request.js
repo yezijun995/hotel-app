@@ -5,6 +5,8 @@ import Cookie from 'js-cookie'
 import router from '../router'
 import { getToken } from './auth'
 
+axios.defaults.withCredentials = false;
+
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';

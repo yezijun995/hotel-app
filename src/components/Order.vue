@@ -2,7 +2,7 @@
   <div id="order">
     <mu-container class="orderContainer">
       <mu-row>
-        <mu-appbar class="orderAppBar" color="primary">
+        <mu-appbar class="orderAppBar" >
           <mu-icon value="account_balance_wallet" slot="left"></mu-icon>
           我的订单
         </mu-appbar>
@@ -13,9 +13,7 @@
             <mu-list-item avatar button :ripple="true" class="orderItem" v-for="(order,index) in orderList"
                           @click="toDetail(order.ordersId)" :key="order.ordersId">
               <mu-list-item-action>
-                <!--<mu-avatar text-color="primary">-->
-                <mu-button style="min-width: 20px" color="primary">
-                  <!--<mu-icon value="payment" color="primary"></mu-icon>-->
+                <mu-button style="min-width: 20px;background-color: #11a8db;color: white " >
                   {{ index + 1 }}
                 </mu-button>
 
@@ -85,7 +83,7 @@
             status = 'greenA400'
             break;
           case 2:
-            status = '#2196f3'
+            status = '#11a8db'
             break;
           case 3:
             status = 'info'
@@ -122,13 +120,10 @@
     height: 40px;
     width: auto !important;
     border-radius: 30px;
-    /*position: -webkit-sticky;*/
-    /*position: sticky;*/
-    /*top: 0;*/
     margin: 10px;
-    /*background-color: #e91e63;*/
     color: #fff;
     padding: 10px;
+    background-color: #11a8db;
   }
 
   .orderContainer {

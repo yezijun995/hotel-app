@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <mu-appbar style="width: 100%;" class="appBar" z-depth="0" color="primary">
+    <mu-appbar style="width: 100%; background-color: #11a8db;" class="appBar" z-depth="0" >
       <mu-button icon slot="left" @click="open = !open">
         <mu-icon value="menu"></mu-icon>
       </mu-button>
@@ -14,10 +14,9 @@
           </mu-list-item>
         </mu-list>
       </mu-menu>
-      <!--      <mu-button flat @click="navigateTo('/')"><h2>{{hotelInfo.address}}</h2></mu-button>-->
       <mu-menu slot="right" open-on-hover v-if="this.isLogin()">
         <mu-button flat>
-          <mu-chip class="demo-chip" color="primary">
+          <mu-chip class="demo-chip" style="background-color: white">
             <mu-avatar :size="32" color="secondary">
               <mu-icon value="account_circle"></mu-icon>
             </mu-avatar>
@@ -69,12 +68,14 @@
           </mu-list-item-action>
           <mu-list-item-title>查看个人订单</mu-list-item-title>
         </mu-list-item>
-        <!--<mu-list-item  @click="open = false" button>-->
-        <!--<mu-list-item-action>-->
-        <!--<mu-icon value="chevron_left"></mu-icon>-->
-        <!--</mu-list-item-action>-->
-        <!--<mu-list-item-title>关闭侧边栏</mu-list-item-title>-->
-        <!--</mu-list-item>-->
+        <mu-list-item button @click="navigateTo('/message')">
+          <mu-list-item-action>
+            <mu-icon value="message"></mu-icon>
+          </mu-list-item-action>
+          <mu-list-item-title>
+            查看留言
+          </mu-list-item-title>
+        </mu-list-item>
       </mu-list>
     </mu-drawer>
   </div>
@@ -129,7 +130,7 @@
         Cookies.remove("session")
         Cookies.remove("order_id")
         Cookies.remove("hotelId")
-        this.navigateTo("/")
+        this.$router.go(0);
       },
       fetchData() {
         list().then(res => {
@@ -176,7 +177,7 @@
     color: #fff;
     padding: 50px 40px;
     /*background-image: linear-gradient(270deg,#8146b4,#6990f6);*/
-    background-color: #2196f3;
+    background-color: #11a8db;
   }
 
   .layout {

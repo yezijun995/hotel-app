@@ -12,14 +12,14 @@
                            @keyup.enter="submit"></mu-text-field>
           </mu-form-item>
           <mu-form-item>
-            <mu-button flat>忘记密码？</mu-button>
+            <!--            <mu-button flat>忘记密码？</mu-button>-->
             <mu-button flat @click="navigateTo('/register')">立即注册</mu-button>
           </mu-form-item>
         </mu-card-text>
         <mu-card-actions>
           <mu-form-item>
-            <mu-button color="secondary" @click="submit">登录</mu-button>
-            <mu-button @click="navigateTo('/')">先随便逛逛</mu-button>
+            <mu-button color="success" @click="submit">登录</mu-button>
+            <mu-button color="info" @click="navigateTo('/')">先随便逛逛</mu-button>
           </mu-form-item>
         </mu-card-actions>
       </mu-form>
@@ -102,10 +102,10 @@
           console.log(err)
         })
       },
-      setUserInfoCookie(username){
+      setUserInfoCookie(username) {
         getAccountInfo(username).then(res => {
           const info = res.data
-          Cookies.set('user_id',info.userId)
+          Cookies.set('user_id', info.userId)
         }).catch(err => {
           this.$toast.error(err)
         })
@@ -117,8 +117,9 @@
 <style scoped>
   .login-container {
     width: 100%;
-    height: -webkit-fill-available;
-    background-image: linear-gradient(270deg, #8146b4, #6990f6);
+    /*height: -webkit-fill-available;*/
+    height: 100vh;
+    background-image: linear-gradient(270deg, #6990f6, #11a8db);
     padding: 8px;
   }
 

@@ -2,7 +2,7 @@
   <div id="room">
     <mu-container class="roomPaper">
       <mu-row>
-        <mu-appbar class="roomAppBar" color="primary">
+        <mu-appbar class="roomAppBar" >
           <mu-icon value="whatshot" slot="left"></mu-icon>
           热门房型
         </mu-appbar>
@@ -57,7 +57,8 @@
                   <!--                      <mu-icon left value="filter_tilt_shift" ></mu-icon>-->
                   <!--                      剩余空房：{{ rt.rest }}-->
                   <!--                    </span>-->
-                  <mu-button color="primary" :disabled="rt.rest<=0" style="width: 50%" @click="book(rt.roomTypeId)">立即预订
+                  <mu-button  :disabled="rt.rest<=0" style="width: 50%;background-color: #11a8db;color: white"
+                              @click="book(rt.roomTypeId)">立即预订
                   </mu-button>
                 </mu-list-item>
               </mu-list>
@@ -138,20 +139,13 @@
   }
 
   .roomAppBar {
-    /*position: -webkit-sticky;*/
-    /*position: sticky;*/
-    /*top: 0;*/
-    /*z-index: 102;*/
     height: 40px;
     width: auto !important;
     border-radius: 30px;
-    /*position: -webkit-sticky;*/
-    /*position: sticky;*/
-    /*top: 0;*/
     margin: 10px;
-    /*background-color: #e91e63;*/
     color: #fff;
     padding: 10px;
+    background-color: #11a8db;
   }
 
   .roomPaper {

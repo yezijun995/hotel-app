@@ -41,7 +41,7 @@ const vFilter = {
         status = '已入住'
         break;
       case '3':
-        status = '订单超时'
+        status = '已退宿'
         break;
     }
     return status

@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <mu-paper class="banner">
-      <img src="../assets/logo26.png" class="logo">
-      <h3>一家国际化连锁经营的大型酒店</h3>
+      <img src="../assets/logo.png" class="logo">
+      <h2>Yifelix连锁酒店</h2>
       <p v-if="!isLogin()">
         <mu-button color="secondary" @click="navigateTo('/login')">
           <b>立即登录</b>
@@ -11,7 +11,7 @@
       </p>
       <p v-else="isLogin()">
         <mu-button color="secondary" @click="navigateTo('/room')">
-          浏览热门客房
+          浏览酒店客房
         </mu-button>
         <mu-button color="" @click="navigateTo('/order')">查看个人订单</mu-button>
       </p>
@@ -22,21 +22,21 @@
     <div class="demo-paper">
       <mu-row>
         <mu-col lg="4" sm="12">
-          <img :src="indexImg2">
-          <h2>国际化</h2>
-          <p>一家国际化连锁经营的大型酒店</p>
+          <img :src="indexImg1">
+          <p>新定义</p>
+          <h2>NEW DEFINATION</h2>
         </mu-col>
 
         <mu-col lg="4" sm="12">
-          <img :src="indexImg1">
-          <h2>信息化</h2>
-          <p>酒店现代化形象的标志，为客户提供方便快捷的服务</p>
+          <img :src="indexImg2">
+          <p>再出发</p>
+          <h2>NEW JOURNEY</h2>
         </mu-col>
 
         <mu-col lg="4" sm="12">
           <img :src="indexImg3">
-          <h2>互联网</h2>
-          <p>网上预订快捷安全，折扣优惠高达50％！ 不收预订费，价格优惠。</p>
+          <p>舒自在</p>
+          <h2>COMFORTABLE</h2>
         </mu-col>
 
       </mu-row>
@@ -53,9 +53,9 @@
 </template>
 
 <script>
-  import indexImg1 from '../assets/imgs/index1.png'
-  import indexImg2 from '../assets/imgs/index2.png'
-  import indexImg3 from '../assets/imgs/index3.png'
+  import indexImg1 from '../assets/imgs/酒店1.png'
+  import indexImg2 from '../assets/imgs/酒店2.png'
+  import indexImg3 from '../assets/imgs/酒店3.png'
   import colImg from '../assets/banner/banner2.jpg'
   import Cookies from 'js-cookie'
   import {getAllHotel, list} from "@/api/hotel"
@@ -67,10 +67,6 @@
         indexImg1,
         indexImg2,
         indexImg3,
-        // hotelInfo: {
-        //   hotelName: "ho",
-        //   address: ""
-        // },
         list: [{
           image: colImg,
           title: 'Breakfast',
@@ -88,7 +84,6 @@
     },
     created: function () {
       this.isLogin()
-      // this.fetchData()
     },
     props: {
       hotelInfo: {
@@ -138,11 +133,9 @@
   }
 
   .banner {
-    /*margin-top: 64px;*/
     display: flex;
     flex-direction: column;
-    /*background-image: linear-gradient(270deg,#8146b4,#6990f6);*/
-    background-color: #2196f3;
+    background-color: #11a8db;
     height: 600px;
     align-items: center;
     justify-content: center;
@@ -165,7 +158,7 @@
     text-align: center;
     color: #fff;
     padding: 50px 40px;
-    background-color: #2196f3;
+    background-color: #11a8db;
     /*background-image: linear-gradient(270deg,#8146b4,#6990f6);*/
   }
 

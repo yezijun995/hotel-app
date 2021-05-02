@@ -12,6 +12,7 @@ import OrderDetail from "@/components/OrderDetail";
 import Register from "@/components/Register";
 import Cookie from 'js-cookie'
 import Toast from 'muse-ui-toast';
+import Message from "@/components/Message";
 Vue.use(Router)
 
 const route = new Router({
@@ -31,6 +32,7 @@ const route = new Router({
         { path: '/order', name: 'Order', component: Order,meta: {requireAuth: true,} },
         { path: '/orderDetail', name: 'OrderDetail', component: OrderDetail ,meta: {requireAuth: true,}},
         { path: '/makeOrder', name: 'MakeOrder', component: MakeOrder ,meta: {requireAuth: true,}},
+        { path: '/message', name: 'Message', component: Message ,meta: {requireAuth: true,}},
       ]
     },
     { path: '*', redirect: '/404', hidden: true }
